@@ -32,6 +32,7 @@ describe("POST /dogs", () => {
       }
     );
     expect(status).toBe(201);
+
     expect(data.name).toBe(newName);
     const newDoomslayer = await prisma.dog.findFirst({
       where: {
